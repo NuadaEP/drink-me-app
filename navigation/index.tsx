@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 import {
   NavigationContainer,
   DefaultTheme,
@@ -75,6 +75,7 @@ function RootNavigator() {
       <Stack.Group
         screenOptions={({ navigation }) => ({
           presentation: "modal",
+          title: "Preparando Drink",
           headerStyle: {
             backgroundColor: Colors[colorScheme].background,
           },
@@ -86,9 +87,9 @@ function RootNavigator() {
                 opacity: pressed ? 0.5 : 1,
               })}
             >
-              <FontAwesome5
-                name="xmark-circle"
-                size={25}
+              <FontAwesome
+                name="angle-left"
+                size={24}
                 color={Colors[colorScheme].text}
               />
             </Pressable>
